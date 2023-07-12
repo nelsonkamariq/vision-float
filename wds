@@ -1,0 +1,9 @@
+window.setInterval(function(){
+document.getElementsByClassName('jfk-checkbox-checkmark')[0].click();
+var e2 = new KeyboardEvent("keydown", {view: window, key: "#",keyIdentifier: "U+0023", code: 'Digit3', shiftKey: true, bubbles: true, cancelable: true});
+delete e2.which;
+delete e2.keyCode;
+Object.defineProperty(e2, "which", {"value" : 51});
+Object.defineProperty(e2, "keyCode", {"value" : 51});
+document.getElementsByClassName('gc')[0].dispatchEvent(e2);
+},1000);
